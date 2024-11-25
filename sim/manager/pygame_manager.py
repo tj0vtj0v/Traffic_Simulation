@@ -1,6 +1,5 @@
 import pygame
 
-from sim.manager.sim_manager import SimManager
 from sim.manager.world_manager import WorldManager
 
 
@@ -9,7 +8,6 @@ class PygameManager(WorldManager):
         super().__init__(pygame.display.set_mode((920, 920)))
 
         self.clock = pygame.time.Clock()
-        self.sim_manager = SimManager(self.canvas)
 
     def start(self) -> None:
         pygame.init()
